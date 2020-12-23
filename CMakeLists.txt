@@ -40,7 +40,7 @@ function(NIC_ChanMux_DeclareCAmkESComponent
             -Werror
         LIBS
             os_core_api
-            os_libs
+            lib_debug
             chanmux_nic_driver
     )
 
