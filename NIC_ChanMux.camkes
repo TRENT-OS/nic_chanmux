@@ -1,17 +1,14 @@
 /*
- * Copyright (C) 2020, Hensoldt Cyber GmbH
- */
-
-/*
- *  NIC-Chanmux CAmkES Component
+ * NIC-Chanmux CAmkES Component
  *
- *  to be used as:
+ * Copyright (C) 2020-2021, HENSOLDT Cyber GmbH
  *
- *      #include "NIC_ChanMux/NIC_ChanMux.camkes"
  *
- *      NIC_ChanMux_COMPONENT_DEFINE(NIC_Chanmux_Driver_1, 16384)
- *      NIC_ChanMux_COMPONENT_DEFINE(NIC_Chanmux_Driver_2, 16384)
+ * to be used as:
  *
+ *   #include "NIC_ChanMux/NIC_ChanMux.camkes"
+ *   NIC_ChanMux_COMPONENT_DEFINE(NIC_Chanmux_Driver_1, 16384)
+ *   NIC_ChanMux_COMPONENT_DEFINE(NIC_Chanmux_Driver_2, 16384)
  */
 
 #pragma once

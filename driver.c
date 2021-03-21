@@ -1,7 +1,7 @@
 /*
- *  NIC ChanMux Driver
+ * NIC ChanMux Driver
  *
- *  Copyright (C) 2020, Hensoldt Cyber GmbH
+ * Copyright (C) 2020, HENSOLDT Cyber GmbH
  */
 
 #include "lib_debug/Debug.h"
