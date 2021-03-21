@@ -51,9 +51,9 @@ post_init(void)
         .network_stack =
         {
             // driver -> network stack
-            .to             = OS_DATAPORT_ASSIGN(nic_port_to),
+            .to             = OS_DATAPORT_ASSIGN(nic_to_port),
             // network stack -> driver
-            .from           = OS_DATAPORT_ASSIGN(nic_port_from),
+            .from           = OS_DATAPORT_ASSIGN(nic_from_port),
             .notify         = nic_event_hasData_emit
         },
 
