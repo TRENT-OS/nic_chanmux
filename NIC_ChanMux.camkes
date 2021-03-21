@@ -21,9 +21,7 @@ import <if_OS_Nic.camkes>;
 #include "ChanMux/ChanMux.camkes"
 
 
-
 //------------------------------------------------------------------------------
-
 #define NIC_ChanMux_COMPONENT_DEFINE( \
     _name_, \
     _ringbuffer_size_) \
@@ -31,7 +29,7 @@ import <if_OS_Nic.camkes>;
     component _name_ { \
         control; \
         \
-        has              mutex               mutex_ctrl_channel; \
+        has mutex mutex_ctrl_channel; \
         \
         /* lower interface to ChanMux ------------------------------------- */ \
         ChanMux_CLIENT_DECLARE_INTERFACE(chanMux) \
@@ -45,9 +43,9 @@ import <if_OS_Nic.camkes>;
         dataport         Buf                    nic_port_from; /* network stack -> driver */ \
         \
         /* usage of LogServer is optional ----------------------------------*/ \
-        maybe uses      if_OS_Logger        logServer_rpc; \
-        maybe dataport  Buf                 logServer_port; \
-        maybe consumes  EventReady          logServer_event_ready; \
+        maybe uses      if_OS_Logger  logServer_rpc; \
+        maybe dataport  Buf           logServer_port; \
+        maybe consumes  EventReady    logServer_event_ready; \
     }
 
 
