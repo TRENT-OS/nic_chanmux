@@ -68,8 +68,8 @@ import <if_OS_Nic.camkes>;
 #define NIC_ChanMux_INSTANCE_CONNECT_CLIENT( \
     _inst_, \
     _nic_rpc_, \
-    _nic_dp_to_, \
-    _nic_dp_from_, \
+    _nic_port_to_, \
+    _nic_port_from_, \
     _nic_ev_) \
     \
     connection seL4NotificationNative  \
@@ -81,13 +81,13 @@ import <if_OS_Nic.camkes>;
             from    _nic_rpc_, \
             to      _inst_.nic_rpc); \
     connection seL4SharedData \
-        _inst_ ## _nic_dp_from ( \
+        _inst_ ## _nic_port_from ( \
             from    _inst_.nic_port_to, \
-            to      _nic_dp_from_); \
+            to      _nic_port_from_); \
     connection seL4SharedData \
-        _inst_ ## _nic_dp_to( \
+        _inst_ ## _nic_port_to( \
             from    _inst_.nic_port_from, \
-            to      _nic_dp_to_);
+            to      _nic_port_to_);
 
 
 /*
