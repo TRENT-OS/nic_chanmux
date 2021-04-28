@@ -37,7 +37,7 @@ import <if_OS_Logger.camkes>;
         ChanMux_CLIENT_DECLARE_CHANNEL_CONNECTOR(chanMux, data) \
         \
         /* upper interface as NIC Driver ---------------------------------- */ \
-        IF_OS_NIC_LOWER_INTERFACE_FIELDS(nic, _ringbuffer_size_) \
+        IF_OS_NIC_PROVIDE(nic, _ringbuffer_size_) \
         \
         /* usage of LogServer is optional ----------------------------------*/ \
         maybe uses      if_OS_Logger  logServer_rpc; \
